@@ -6,11 +6,11 @@ total.value = price+"원";
 
 for(i=0; i<sideMenu.length; i++) {
     sideMenu[i].onclick = function() {
-      if(this.checked == true) {
-        price += parseInt(this.value);
+      if(sideMenu[i].checked == true) {
+        price += parseInt(sideMenu[i].value);
       }
       else {
-         price -= parseInt(this.value);        
+         price -= parseInt(thsideMenu[i]is.value);        
       }
       total.value = price+"원";
     } 

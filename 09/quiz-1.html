@@ -28,6 +28,39 @@
         <input type="text" id="total" name="total" class="price" readonly>
       </fieldset>
 		</form>	
-	</div>
+  </div>
+  <script>
+    /*
+    var total = document.querySelector("#total");
+    var value = 24000;
+    var box = document.querySelectorAll(".checkbx");
+    for(var i =0;i<box.length;i++){
+      box[i].onclick = function() {
+        if(this.checked){
+          value += ParseInt(this.value);
+        }
+      }
+      total.value = value + " 원";
+    }*/
+
+    var price = 24000;
+
+var sideMenu = document.querySelectorAll(".checkbx");
+var total = document.querySelector("#total");
+total.value = price+"원";
+
+for(i=0; i<sideMenu.length; i++) {
+    sideMenu[i].onclick = function() {
+      if(this.checked == true) {
+        price += Number(this.value);
+      }
+      else {
+         price -= Number(this.value);        
+      }
+      total.value = price+"원";
+    } 
+}
+
+  </script>
 </body>
 </html>

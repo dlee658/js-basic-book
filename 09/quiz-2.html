@@ -26,6 +26,14 @@
 			</div>
 		</form>	
     </div>
-    
+    <script>
+		var radius = document.querySelector("#radius");
+		var start = document.querySelector("#start");
+		
+		start.addEventListener("click", function() {
+			document.querySelector("#round").value = ParseInt(radius.value) * Math.PI * 2;
+			document.querySelector("#area").value = Math.PI * ParseInt(radius.value) * Number(radius.value);
+		});
+	</script>
 </body>
 </html>
